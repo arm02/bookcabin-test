@@ -101,6 +101,37 @@ Sistem ini menerima kriteria pencarian dalam format JSON berikut.
   "sortBy": "best_value" //default 
 }
 ```
+**CURL**
+```bash
+curl --location 'http://localhost:8080/search' \
+--header 'Content-Type: application/json' \
+--data '{
+    "origin": "CGK",
+    "destination": "DPS",
+    "departureDate": "2025-12-15",
+    "returnDate": "2025-12-20",
+    "passengers": 10,
+    "cabinClass": "economy",
+    "filters": {
+        "maxPrice": 5000000,
+        "minPrice": 500000,
+        "maxStops": 1,
+        "airlines": [
+            "AirAsia",
+            "Garuda Indonesia",
+            "Lion Air",
+            "Batik Air"
+        ],
+        "minDurationMinutes": null,
+        "maxDurationMinutes": null,
+        "minDepTime": null,
+        "maxDepTime": null,
+        "minArrTime": null,
+        "maxArrTime": null
+    },
+    "sortBy": "best_value"
+}'
+```
 
 | Field sortBy | Keterangan                                       |
 | ------------ | ------------------------------------------------ |
