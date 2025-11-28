@@ -33,7 +33,7 @@ func main() {
 		IdleTimeout:  120 * time.Second,
 	}
 
-	http.HandleFunc("/search", searchHandler.SearchFlight)
+	http.HandleFunc("/v1/search", searchHandler.SearchFlight)
 
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, syscall.SIGINT, syscall.SIGTERM)

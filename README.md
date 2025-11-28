@@ -103,7 +103,7 @@ Sistem ini menerima kriteria pencarian dalam format JSON berikut.
 ```
 **CURL**
 ```bash
-curl --location 'http://localhost:8080/search' \
+curl --location 'http://localhost:8080/v1/search' \
 --header 'Content-Type: application/json' \
 --data '{
     "origin": "CGK",
